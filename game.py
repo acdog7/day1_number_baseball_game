@@ -10,6 +10,9 @@ cpu_numbers = sample(range(1,10), 3)
 
 print(cpu_numbers)
 
+# 시도 횟수를 기록하기 위한 변수
+try_count = 0
+
 # 사람이 3자리 숫자를 입력
 while True :
 
@@ -19,6 +22,9 @@ while True :
 
     # 3자리 숫자를 입력 하면 => 3칸의 목록으로 분리
     input_number = int(input('3자리 숫자를 입력 : '))
+
+    # 입력 했으니 시도횟수 증가
+    try_count += 1
 
     # ex. 123 => [1,2,3] 으로 분리.
     # 3자리 정수가 들어왔다고 전제하자.
@@ -64,6 +70,8 @@ while True :
     if s_count == 3:
         print('3S 축하합니다')
         
+        #시도횟수도 출력
+        print(f'{try_count}만에 맞췄습니다.')
         break
         
 
