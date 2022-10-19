@@ -12,6 +12,7 @@ print(cpu_numbers)
 
 # 사람이 3자리 숫자를 입력
 while True :
+
 # 숫자 3개를 저장할 공간
     user_numbers = list()
     # 사람이 3자리 숫자를 입력 => 맞출때 까지 계속 입력
@@ -52,11 +53,19 @@ while True :
                 if i == j:
                     # 같다 : S 발견
                     s_count += 1
+
                 else :
                     # 다르다 : 위치는 다르지만 숫자는 같다 : B 발견
                     b_count += 1
+    
     # S/B 판정 끝나면 출력
-    print(f'{s_count}S {b_count}B 입니다.')                
+    print(f'{s_count}S {b_count}B 입니다.')
+
+    if s_count == 3:
+        print('3S 축하합니다')
+        
+        break
         
 
-    # 3S가 되었다면? => 정답 맞춤! => 게임 종료
+    # 문제 1. 3S가 되었다면? => 정답 맞춤! (축하 문구) => 게임 종료
+    # 문제 2. 종료 전에, 몇번의 시도만에 맞췄는지, 7회만에 맞췄습니다.
