@@ -10,3 +10,11 @@ cpu_numbers = sample(range(1,10), 3)
 
 print(cpu_numbers)
 
+# 사람이 3자리 숫자를 입력
+while True :
+# 숫자 3개를 저장할 공간
+    user_numbers = list()
+    # 사람이 3자리 숫자를 입력 => 맞출때 까지 계속 입력
+
+    # 3자리 숫자를 입력 하면 => 3칸의 목록으로 분리
+    input_number = int(input('3자리 숫자를 입력 : '))
